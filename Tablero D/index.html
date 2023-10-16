@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Tablero</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+   <div class="tablero">
+    <h2> Rompecabezas </h2>
+    <div class="cuadrados"></div>
+    <div class="intentos"></div>
+    <button class="click" onclick="window.location.reload();">Iniciar </button>
+    </div>
+    <script>
+        const numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"];
+    var shuf_numbers = numbers.sort(() => (Math.random()  > .5) ? 2 : -1);
+    for (var i =0; i<numbers.length; i++){
+        let box = document.createElement('div')
+        box.className = 'caja' ;
+    box.innerHTML = shuf_numbers[i]
+    document.querySelector('.cuadrados').appendChild(box);
+}
+    </script>
+</body>
+
+</body>
+</html>
